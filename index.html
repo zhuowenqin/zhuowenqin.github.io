@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhuowen Qin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --text-muted: #777;
+            --link-color: #1a5276;
+            --link-hover: #0e3a54;
+            --bg: #fafaf8;
+            --border: #ddd;
+            --section-label-width: 130px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Serif 4', 'Georgia', serif;
+            color: var(--text-primary);
+            background: var(--bg);
+            line-height: 1.65;
+            font-size: 15.5px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 50px 30px 40px;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+        a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 28px;
+        }
+
+        .header-left {
+            flex: 1;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            margin-bottom: 6px;
+            color: var(--text-primary);
+        }
+
+        .header-links {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .header-links a {
+            margin-right: 14px;
+        }
+        .header-links span {
+            color: #ccc;
+            margin-right: 14px;
+        }
+
+        .bio {
+            font-size: 15.5px;
+            line-height: 1.72;
+            color: var(--text-secondary);
+        }
+
+        .photo {
+            width: 160px;
+            min-width: 160px;
+            height: 200px;
+            background: #e8e6e1;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 12px;
+            color: #aaa;
+            /* Replace the div below with: <img src="photo.jpg" alt="Zhuowen Qin" class="photo"> */
+        }
+
+        /* Sections */
+        .section {
+            display: flex;
+            gap: 0;
+            padding: 22px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .section-label {
+            width: var(--section-label-width);
+            min-width: var(--section-label-width);
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            padding-top: 2px;
+            letter-spacing: 0.2px;
+        }
+
+        .section-content {
+            flex: 1;
+        }
+
+        .paper {
+            margin-bottom: 14px;
+        }
+        .paper:last-child {
+            margin-bottom: 0;
+        }
+
+        .paper-title {
+            font-weight: 600;
+            font-size: 15.5px;
+        }
+
+        .paper-detail {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .paper-detail em {
+            font-style: italic;
+        }
+
+        .paper-status {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 12.5px;
+            color: var(--text-muted);
+            margin-top: 1px;
+        }
+
+        .paper-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 3px;
+            line-height: 1.55;
+            font-style: italic;
+        }
+
+        .coauthors {
+            color: var(--text-secondary);
+        }
+
+        /* Work in Progress - slightly lighter treatment */
+        .wip .paper-title {
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--border);
+            padding-top: 18px;
+            margin-top: 8px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 12.5px;
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .container { padding: 30px 20px; }
+            .header { flex-direction: column-reverse; gap: 20px; }
+            .photo { width: 120px; min-width: 120px; height: 150px; }
+            .section { flex-direction: column; gap: 4px; }
+            .section-label { width: auto; min-width: auto; margin-bottom: 6px; }
+            :root { --section-label-width: auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <div class="name">Zhuowen Qin</div>
+                <div class="header-links">
+                    <a href="mailto:zhuowen.qin@kcl.ac.uk">Email</a>
+                    <a href="CV.pdf">CV</a>
+                    <a href="https://bsky.app/profile/zhuowen.bsky.social">Bluesky</a>
+                </div>
+                <div class="bio">
+                    I am a PhD student in the <a href="https://www.kcl.ac.uk/political-economy">Department of Political Economy</a> at King's College London. My research interests lie in <strong>social norms</strong> and <strong>inequality</strong>.
+                </div>
+                <div class="bio" style="margin-top: 10px;">
+                    Before King's, I received a Master of Management in Public Policy from Fudan University and a B.A. in German from Nanjing University. I also spent a semester at Sciences Po Paris and at the University of Tübingen.
+                </div>
+            </div>
+            <!-- Replace this div with your photo: <img src="photo.jpg" alt="Zhuowen Qin" class="photo" style="object-fit:cover;"> -->
+            <div class="photo">photo</div>
+        </div>
+
+        <!-- Publication -->
+        <div class="section">
+            <div class="section-label">Publication</div>
+            <div class="section-content">
+                <div class="paper">
+                    <div class="paper-title">The Formation Mechanism and Improvement Path of Innovation Cluster Resilience</div>
+                    <div class="paper-detail">
+                        (with Ye Liu), 2024, <em>Fudan Journal (Social Science)</em> (03), 177–189. [Chinese full text]
+                    </div>
+                    <div class="paper-desc">We review how knowledge spillovers, government coordination, and urban planning jointly shape the resilience of innovation clusters, with a focus on China.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Working Papers -->
+        <div class="section">
+            <div class="section-label">Working Papers</div>
+            <div class="section-content">
+                <div class="paper">
+                    <div class="paper-title">The Mystery of Intrinsic Value and Price Differences of Property in China: Urban Heterogeneity and the Formation Mechanism of House Price Bubble</div>
+                    <div class="paper-detail">
+                        (with Andong Zhuge &amp; Ping Zhang)
+                    </div>
+                    <div class="paper-status">Under review</div>
+                    <div class="paper-desc">We decompose house prices into intrinsic value and bubble components and show how urban characteristics drive price distortions across Chinese cities.</div>
+                </div>
+                <div class="paper">
+                    <div class="paper-title">Paths of Inheritance: Heterogeneity in Intergenerational Transmission of Housing Inequality: Evidence from Cohort Study in China (1935–2003)</div>
+                    <div class="paper-detail">
+                        (with Yuting Li)
+                    </div>
+                    <div class="paper-desc">We document heterogeneous patterns of intergenerational housing wealth transmission across Chinese birth cohorts from 1935 to 2003.</div>
+                </div>
+                <div class="paper">
+                    <div class="paper-title">Hearing the Nation: Low-Barrier Information and Rural Education in Socialist China</div>
+                    <div class="paper-desc">We study how radio access shaped rural educational outcomes in socialist China.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Work in Progress -->
+        <div class="section">
+            <div class="section-label">Work in Progress</div>
+            <div class="section-content wip">
+                <div class="paper">
+                    <div class="paper-title">Transaction Tax, Affordability, and Housing Inequality</div>
+                    <div class="paper-detail">(with <a href="https://yonatanberman.com">Yonatan Berman</a>)</div>
+                    <div class="paper-desc">We study how housing transaction taxes affect affordability and wealth inequality.</div>
+                </div>
+                <div class="paper">
+                    <div class="paper-title">Dam Construction and Female Education: Gendered Facts in China</div>
+                    <div class="paper-detail">(with Jianfeng Wu)</div>
+                    <div class="paper-desc">We examine the gendered effects of dam construction on educational attainment in China.</div>
+                </div>
+                <div class="paper">
+                    <div class="paper-title">Saving for Sons: Gender Norms and Housing Investment Behaviour in China</div>
+                    <div class="paper-detail">(with <a href="https://www.sofiewaltl.com">Sofie R. Waltl</a> &amp; Rain Zhao)</div>
+                    <div class="paper-desc">We study how son-preference norms shape household housing investment behaviour in China.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Teaching -->
+        <div class="section">
+            <div class="section-label">Teaching</div>
+            <div class="section-content">
+                <div class="paper">
+                    <div class="paper-detail"><strong>King's College London</strong> (Graduate Teaching Assistant):</div>
+                    <div class="paper-detail" style="margin-top: 4px; color: var(--text-secondary);">Econometrics, Seminar (Undergrad), 2025</div>
+                </div>
+                <div class="paper">
+                    <div class="paper-detail"><strong>Fudan University</strong> (Teaching Assistant, 2021–2024):</div>
+                    <div class="paper-detail" style="margin-top: 4px; color: var(--text-secondary);">
+                        Quantitative Research in Public Administration (Grad), Urban Economics (Undergrad), Quantitative Research Methods (Undergrad &amp; Grad), Public Economics (Grad)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; Zhuowen Qin 2025
+        </div>
+
+    </div>
+</body>
+</html>
