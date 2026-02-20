@@ -48,15 +48,11 @@
 
         /* Header */
         .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 40px;
             margin-bottom: 28px;
         }
 
-        .header-left {
-            flex: 1;
+        .header-top {
+            margin-bottom: 6px;
         }
 
         .name {
@@ -82,6 +78,20 @@
             margin-right: 14px;
         }
 
+        .bio-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 30px;
+        }
+
+        .bio-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
         .bio {
             font-size: 15.5px;
             line-height: 1.72;
@@ -89,18 +99,12 @@
         }
 
         .photo {
-            width: 160px;
-            min-width: 160px;
-            height: 200px;
-            background: #e8e6e1;
+            width: 180px;
+            min-width: 180px;
+            height: auto;
             border-radius: 3px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 12px;
-            color: #aaa;
-            /* Replace the div below with: <img src="photo.jpg" alt="Zhuowen Qin" class="photo"> */
+            object-fit: cover;
+            align-self: stretch;
         }
 
         /* Sections */
@@ -185,8 +189,8 @@
         /* Responsive */
         @media (max-width: 640px) {
             .container { padding: 30px 20px; }
-            .header { flex-direction: column-reverse; gap: 20px; }
-            .photo { width: 120px; min-width: 120px; height: 150px; }
+            .bio-wrapper { flex-direction: column-reverse; gap: 20px; }
+            .photo { width: 120px; min-width: 120px; align-self: flex-start; }
             .section { flex-direction: column; gap: 4px; }
             .section-label { width: auto; min-width: auto; margin-bottom: 6px; }
             :root { --section-label-width: auto; }
@@ -198,21 +202,25 @@
 
         <!-- Header -->
         <div class="header">
-            <div class="header-left">
+            <div class="header-top">
                 <div class="name">Zhuowen Qin</div>
                 <div class="header-links">
                     <a href="mailto:zhuowen.qin@kcl.ac.uk">Email</a>
                     <a href="CV_Zhuowen_Qin.pdf">CV</a>
                     <a href="https://bsky.app/profile/zhuowen.bsky.social">Bluesky</a>
                 </div>
-                <div class="bio">
-                    I am a PhD student in the <a href="https://www.kcl.ac.uk/political-economy">Department of Political Economy</a> at King's College London. I study how social norms and state institutions shape economic inequality. I am especially interested in nation building, gender norms, and housing markets.
-                </div>
-                <div class="bio" style="margin-top: 10px;">
-                    Before King's, I received an MSc in Public Policy from Fudan University and a B.A. in German from Nanjing University. I also spent exchange semesters at Sciences Po Paris and the University of Tübingen.
-                </div>
             </div>
-            <img src="photo1.jpg" alt="Zhuowen Qin" class="photo" style="object-fit:cover;">
+            <div class="bio-wrapper">
+                <div class="bio-text">
+                    <div class="bio">
+                        I am a PhD student in the <a href="https://www.kcl.ac.uk/political-economy">Department of Political Economy</a> at King's College London. I study how social norms and state institutions shape economic inequality. I am especially interested in nation building, gender norms, and housing markets.
+                    </div>
+                    <div class="bio" style="margin-top: 10px;">
+                        Before King's, I received an MSc in Public Policy from Fudan University and a B.A. in German from Nanjing University. I also spent exchange semesters at Sciences Po Paris and the University of Tübingen.
+                    </div>
+                </div>
+                <img src="photo.jpg" alt="Zhuowen Qin" class="photo">
+            </div>
         </div>
 
         <!-- Publication -->
@@ -242,6 +250,7 @@
                     <div class="paper-detail">
                         (with Andong Zhuge &amp; Ping Zhang)
                     </div>
+                    <div class="paper-status">Under review</div>
                     <div class="paper-desc">We decompose house prices into intrinsic value and bubble components and show how urban characteristics drive price distortions across Chinese cities.</div>
                 </div>
                 <div class="paper">
@@ -261,7 +270,17 @@
                 <div class="paper">
                     <div class="paper-title">Transaction Tax, Affordability, and Housing Inequality</div>
                     <div class="paper-detail">(with <a href="https://yonatanberman.com">Yonatan Berman</a>)</div>
-                    <div class="paper-desc">We study the UK's 2020 Stamp Duty holiday and show that the tax cut was largely capitalised into higher prices, with regressive distributional effects favouring upper-middle-income households over first-time buyers.</div>
+                    <div class="paper-desc">We study how housing transaction taxes affect affordability and wealth inequality.</div>
+                </div>
+                <div class="paper">
+                    <div class="paper-title">Dams and Highways: Complementary Infrastructure Effects in China</div>
+                    <div class="paper-detail">(with Jianfeng Wu)</div>
+                    <div class="paper-desc">We study whether dams and highways are complements: dams provide productive inputs but may require transport connectivity to translate into income gains.</div>
+                </div>
+                <div class="paper">
+                    <div class="paper-title">Hollywood Films and Gender Norms in China</div>
+                    <div class="paper-detail">(with Ningxi Liu)</div>
+                    <div class="paper-desc">We exploit the 1994 introduction of Hollywood blockbuster imports to study how exposure to Western cultural content affected local gender norms in China.</div>
                 </div>
                 <div class="paper">
                     <div class="paper-title">Saving for Sons: Gender Norms and Housing Investment Behaviour in China</div>
