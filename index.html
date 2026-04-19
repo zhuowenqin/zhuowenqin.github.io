@@ -3,7 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhuowen Qin</title>
+    <title>Zhuowen Qin — PhD Candidate, King's College London</title>
+
+    <!-- SEO: description & author -->
+    <meta name="description" content="Zhuowen Qin is a PhD student in the Department of Political Economy at King's College London, studying social norms, state institutions, and economic inequality.">
+    <meta name="author" content="Zhuowen Qin">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <!-- Canonical URL: REPLACE with your actual site URL -->
+    <link rel="canonical" href="https://your-domain.com/">
+
+    <!-- Open Graph (Google now combines OG + Schema.org to pick the thumbnail) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Zhuowen Qin — PhD Candidate, King's College London">
+    <meta property="og:description" content="PhD student in Political Economy at King's College London. Research on social norms, state institutions, and economic inequality.">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:image" content="https://your-domain.com/zhuowen-qin.JPG">
+    <meta property="og:image:alt" content="Portrait photo of Zhuowen Qin, PhD candidate in Political Economy at King's College London">
+    <meta property="profile:first_name" content="Zhuowen">
+    <meta property="profile:last_name" content="Qin">
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zhuowen Qin — PhD Candidate, King's College London">
+    <meta name="twitter:description" content="PhD student in Political Economy at King's College London.">
+    <meta name="twitter:image" content="https://your-domain.com/zhuowen-qin.JPG">
+    <meta name="twitter:image:alt" content="Portrait photo of Zhuowen Qin">
+
+    <!-- Schema.org structured data: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Zhuowen Qin",
+      "givenName": "Zhuowen",
+      "familyName": "Qin",
+      "url": "https://your-domain.com/",
+      "image": "https://your-domain.com/zhuowen-qin.JPG",
+      "jobTitle": "PhD Candidate",
+      "description": "PhD student in the Department of Political Economy at King's College London, researching social norms, state institutions, and economic inequality.",
+      "email": "mailto:zhuowen.qin@kcl.ac.uk",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "King's College London",
+        "department": "Department of Political Economy",
+        "url": "https://www.kcl.ac.uk/political-economy"
+      },
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "Fudan University"},
+        {"@type": "CollegeOrUniversity", "name": "Nanjing University"}
+      ],
+      "knowsAbout": ["Political Economy", "Nation Building", "Gender Norms", "Housing Markets", "Economic Inequality"],
+      "sameAs": [
+        "https://bsky.app/profile/zhuowen.bsky.social"
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -51,14 +107,8 @@
             text-decoration: underline;
         }
 
-        /* Header */
-        .header {
-            margin-bottom: 28px;
-        }
-
-        .header-top {
-            margin-bottom: 6px;
-        }
+        .header { margin-bottom: 28px; }
+        .header-top { margin-bottom: 6px; }
 
         .name {
             font-size: 28px;
@@ -75,13 +125,8 @@
             color: var(--text-muted);
             margin-bottom: 20px;
         }
-        .header-links a {
-            margin-right: 14px;
-        }
-        .header-links span {
-            color: #ccc;
-            margin-right: 14px;
-        }
+        .header-links a { margin-right: 14px; }
+        .header-links span { color: #ccc; margin-right: 14px; }
 
         .bio-wrapper {
             display: flex;
@@ -90,9 +135,7 @@
             gap: 30px;
         }
 
-        .bio-text {
-            flex: 1;
-        }
+        .bio-text { flex: 1; }
 
         .bio {
             font-size: 15.5px;
@@ -109,7 +152,6 @@
             object-position: center top;
         }
 
-        /* Nav menu */
         .nav-menu {
             margin-top: 26px;
             padding: 10px 0;
@@ -131,17 +173,13 @@
             text-decoration: none;
         }
 
-        /* Sections */
         .section {
             display: flex;
             gap: 0;
             padding: 22px 0;
             border-top: 1px solid var(--border);
         }
-        /* First section after nav shouldn't double up the border */
-        .nav-menu + .section {
-            border-top: none;
-        }
+        .nav-menu + .section { border-top: none; }
 
         .section-label {
             width: var(--section-label-width);
@@ -154,16 +192,10 @@
             letter-spacing: 0.2px;
         }
 
-        .section-content {
-            flex: 1;
-        }
+        .section-content { flex: 1; }
 
-        .paper {
-            margin-bottom: 14px;
-        }
-        .paper:last-child {
-            margin-bottom: 0;
-        }
+        .paper { margin-bottom: 14px; }
+        .paper:last-child { margin-bottom: 0; }
 
         .paper-title {
             font-weight: 600;
@@ -176,16 +208,7 @@
             line-height: 1.6;
         }
 
-        .paper-detail em {
-            font-style: italic;
-        }
-
-        .paper-status {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 12.5px;
-            color: var(--text-muted);
-            margin-top: 1px;
-        }
+        .paper-detail em { font-style: italic; }
 
         .paper-desc {
             font-size: 14px;
@@ -195,16 +218,8 @@
             font-style: italic;
         }
 
-        .coauthors {
-            color: var(--text-secondary);
-        }
+        .wip .paper-title { font-weight: 600; }
 
-        /* Work in Progress - slightly lighter treatment */
-        .wip .paper-title {
-            font-weight: 600;
-        }
-
-        /* Footer */
         .footer {
             border-top: 1px solid var(--border);
             padding-top: 18px;
@@ -214,7 +229,6 @@
             color: var(--text-muted);
         }
 
-        /* Responsive */
         @media (max-width: 640px) {
             .container { padding: 30px 20px; }
             .bio-wrapper { flex-direction: column-reverse; gap: 20px; }
@@ -229,10 +243,9 @@
 <body>
     <div class="container">
 
-        <!-- Header -->
-        <div class="header">
+        <header class="header">
             <div class="header-top">
-                <div class="name">Zhuowen Qin</div>
+                <h1 class="name">Zhuowen Qin</h1>
                 <div class="header-links">
                     <a href="mailto:zhuowen.qin@kcl.ac.uk">Email</a>
                     <a href="CV_Zhuowen_Qin.pdf">CV</a>
@@ -248,11 +261,19 @@
                         Before King's, I received an MSc in Public Policy from Fudan University and a B.A. in German from Nanjing University. I also spent exchange semesters at Sciences Po Paris and the University of Tübingen.
                     </div>
                 </div>
-                <img src="photo.JPG" alt="Zhuowen Qin" class="photo">
+                <figure style="margin:0;">
+                    <img src="zhuowen-qin.JPG"
+                         alt="Zhuowen Qin, PhD candidate in Political Economy at King's College London"
+                         title="Zhuowen Qin"
+                         class="photo"
+                         width="160"
+                         height="210"
+                         loading="eager"
+                         fetchpriority="high">
+                </figure>
             </div>
-        </div>
+        </header>
 
-        <!-- Nav menu -->
         <nav class="nav-menu">
             <a href="#publication">Publication</a>
             <a href="#working-papers">Working Papers</a>
@@ -260,8 +281,7 @@
             <a href="#teaching">Teaching</a>
         </nav>
 
-        <!-- Publication -->
-        <div class="section" id="publication">
+        <section class="section" id="publication">
             <div class="section-label">Publication</div>
             <div class="section-content">
                 <div class="paper">
@@ -272,10 +292,9 @@
                     <div class="paper-desc">We review how knowledge spillovers, government coordination, and urban planning jointly shape the resilience of innovation clusters, with a focus on China.</div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Working Papers -->
-        <div class="section" id="working-papers">
+        <section class="section" id="working-papers">
             <div class="section-label">Working Papers</div>
             <div class="section-content">
                 <div class="paper">
@@ -297,10 +316,9 @@
                     <div class="paper-desc">We document heterogeneous patterns of intergenerational housing wealth transmission across Chinese birth cohorts from 1935 to 2003.</div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Work in Progress -->
-        <div class="section" id="work-in-progress">
+        <section class="section" id="work-in-progress">
             <div class="section-label">Work in Progress</div>
             <div class="section-content wip">
                 <div class="paper">
@@ -314,10 +332,9 @@
                     <div class="paper-desc">We study how son-preference norms shape household housing investment behaviour in China.</div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Teaching -->
-        <div class="section" id="teaching">
+        <section class="section" id="teaching">
             <div class="section-label">Teaching</div>
             <div class="section-content">
                 <div class="paper">
@@ -331,12 +348,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Footer -->
-        <div class="footer">
+        <footer class="footer">
             &copy; Zhuowen Qin 2026
-        </div>
+        </footer>
 
     </div>
 </body>
