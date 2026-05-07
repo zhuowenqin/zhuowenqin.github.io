@@ -229,6 +229,97 @@
             color: var(--text-muted);
         }
 
+        /* Name gloss popover */
+        .name-cn {
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-left: 8px;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            position: relative;
+            border-bottom: 1px dotted var(--text-muted);
+            transition: color 0.15s;
+        }
+        .name-cn:hover {
+            color: var(--text-secondary);
+        }
+
+        .name-gloss {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 16px 20px;
+            width: 340px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            z-index: 100;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            letter-spacing: 0;
+            cursor: default;
+        }
+        .name-gloss.visible { display: block; }
+
+        .name-gloss::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-left: 1px solid var(--border);
+            border-top: 1px solid var(--border);
+        }
+
+        .gloss-char {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-right: 6px;
+        }
+        .gloss-pinyin {
+            font-family: 'Source Sans 3', sans-serif;
+            font-style: italic;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        .gloss-line {
+            margin-bottom: 8px;
+        }
+        .gloss-line:last-child { margin-bottom: 0; }
+        .gloss-classical {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        .gloss-pronun {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 13px;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            padding-bottom: 9px;
+            border-bottom: 1px solid #eee;
+        }
+        .gloss-together {
+            font-size: 13.5px;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-top: 10px;
+            padding-top: 9px;
+            border-top: 1px solid #eee;
+            line-height: 1.6;
+        }
+
         @media (max-width: 640px) {
             .container { padding: 30px 20px; }
             .bio-wrapper { flex-direction: column-reverse; gap: 20px; }
@@ -237,6 +328,14 @@
             .section-label { width: auto; min-width: auto; margin-bottom: 6px; }
             :root { --section-label-width: auto; }
             .nav-menu { gap: 14px; font-size: 13.5px; }
+            .name-gloss {
+                width: 280px;
+                left: 0;
+                transform: translateX(0);
+            }
+            .name-gloss::before {
+                left: 30px;
+            }
         }
     </style>
 </head>
@@ -245,7 +344,22 @@
 
         <header class="header">
             <div class="header-top">
-                <h1 class="name">Zhuowen Qin</h1>
+                <h1 class="name">Zhuowen Qin
+                    <span class="name-cn" onclick="document.querySelector('.name-gloss').classList.toggle('visible')" aria-label="About my name in Chinese">秦琢雯
+                        <span class="name-gloss" onclick="event.stopPropagation()">
+                            <div class="gloss-pronun">Pronounced roughly "Jor-wen Chin"</div>
+                            <div class="gloss-line">
+                                <span class="gloss-char">琢</span> <span class="gloss-pinyin">zhuó</span><br>
+                                To carve and polish jade. From the classical saying <span class="gloss-classical">玉不琢，不成器</span> — 'uncut jade cannot be made into a vessel.'
+                            </div>
+                            <div class="gloss-line">
+                                <span class="gloss-char">雯</span> <span class="gloss-pinyin">wén</span><br>
+                                Cloud patterns; the motif of coloured clouds across the sky.
+                            </div>
+                            <div class="gloss-together">Together: to refine something until it reveals its natural pattern — the craft behind effortless beauty.</div>
+                        </span>
+                    </span>
+                </h1>
                 <div class="header-links">
                     <a href="mailto:zhuowen.qin@kcl.ac.uk">Email</a>
                     <a href="CV_Zhuowen_Qin.pdf">CV</a>
@@ -355,5 +469,13 @@
         </footer>
 
     </div>
+    <script>
+        document.addEventListener('click', function(e) {
+            var gloss = document.querySelector('.name-gloss');
+            if (gloss && !e.target.closest('.name-cn')) {
+                gloss.classList.remove('visible');
+            }
+        });
+    </script>
 </body>
 </html>
