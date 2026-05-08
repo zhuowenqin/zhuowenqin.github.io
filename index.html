@@ -333,12 +333,17 @@
             :root { --section-label-width: auto; }
             .nav-menu { gap: 14px; font-size: 13.5px; }
             .name-gloss {
-                width: 280px;
-                left: 0;
-                transform: translateX(0);
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: calc(100vw - 48px);
+                max-width: 340px;
+                border-radius: 8px;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.15);
             }
             .name-gloss::before {
-                left: 30px;
+                display: none;
             }
         }
     </style>
