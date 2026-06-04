@@ -142,7 +142,8 @@
         .photo {
             width: 160px;
             min-width: 160px;
-            max-height: 210px;
+            aspect-ratio: 16 / 21;
+            height: auto;
             border-radius: 3px;
             object-fit: cover;
             object-position: center top;
@@ -323,7 +324,7 @@
         @media (max-width: 640px) {
             .container { padding: 30px 20px; }
             .bio-wrapper { flex-direction: column-reverse; gap: 20px; }
-            .photo { width: 120px; min-width: 120px; align-self: flex-start; }
+            .photo { width: 140px; min-width: 140px; aspect-ratio: 16 / 21; height: auto; align-self: flex-start; }
             .section { flex-direction: column; gap: 4px; }
             .section-label { width: auto; min-width: auto; margin-bottom: 6px; }
             :root { --section-label-width: auto; }
@@ -383,6 +384,9 @@
                     </div>
                     <div class="bio" style="margin-top: 10px;">
                         Before King's, I received an MSc in Public Policy from Fudan University and a B.A. in German from Nanjing University. I also spent exchange semesters at Sciences Po Paris and the University of Tübingen.
+                    </div>
+                    <div class="bio" style="margin-top: 10px;">
+                        I'm always happy to talk about research. Feel free to reach out by email at <a href="mailto:zhuowen.qin@kcl.ac.uk">zhuowen.qin@kcl.ac.uk</a>.
                     </div>
                 </div>
                 <img src="zhuowen-qin.jpg"
